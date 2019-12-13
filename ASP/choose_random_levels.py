@@ -6,6 +6,9 @@ import sys
 curr_folder = os.path.dirname(os.path.abspath(__file__))
 output_file = os.path.join(curr_folder, 'output.json')
 
+# In order to segment the models, the ASP code should be ran and ported into a JSON format, using command line args
+# as shown in the bottom of the lp file
+
 output_jsons = []
 
 sys.stdout.write("\rLoading bulk JSON")
