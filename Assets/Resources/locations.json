@@ -1,0 +1,44 @@
+{
+  "Levels": [
+    {
+      "Value": [
+        "inst(0,5,corner)",
+        "inst(5,5,corner)",
+        "inst(10,15,corner)",
+        "inst(15,10,corner)",
+        "inst(5,10,line)",
+        "inst(15,15,line)",
+        "inst(0,0,cross)",
+        "inst(0,10,cross)",
+        "inst(10,10,cross)",
+        "inst(0,15,empty)",
+        "inst(5,0,empty)",
+        "inst(5,15,empty)",
+        "inst(10,0,empty)",
+        "inst(10,5,empty)",
+        "inst(15,0,empty)",
+        "inst(15,5,empty)"
+      ]
+    },
+    {
+      "Value": [
+        "inst(0,5,corner)",
+        "inst(0,15,corner)",
+        "inst(5,5,corner)",
+        "inst(15,10,corner)",
+        "inst(5,10,line)",
+        "inst(15,15,line)",
+        "inst(0,0,cross)",
+        "inst(0,10,cross)",
+        "inst(10,10,cross)",
+        "inst(5,0,empty)",
+        "inst(5,15,empty)",
+        "inst(10,0,empty)",
+        "inst(10,5,empty)",
+        "inst(10,15,empty)",
+        "inst(15,0,empty)",
+        "inst(15,5,empty)"
+      ]
+    }
+  ]
+}
