@@ -6,11 +6,8 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Menu.unity
-    guid: fad486167036e65489505a49ba183ad3
-  - enabled: 1
-    path: Assets/Levels.unity
-    guid: d5f4b42d8a5454a469b9c9e29431a82d
+    path: Assets/Level0.unity
+    guid: d00d2e418e0f2e745b7f61cbe943195e
   - enabled: 1
     path: Assets/Level1.unity
     guid: c52f0fb009df0d64c90c7ffe9fcf8234
@@ -38,51 +35,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Level9.unity
     guid: a40f899eed4c80346924294470633601
-  - enabled: 1
-    path: Assets/Level10.unity
-    guid: 8c8b8245ccf210c429b04f4e57b43157
-  - enabled: 1
-    path: Assets/Level11.unity
-    guid: f1edf35406943214597835c6b838176e
-  - enabled: 1
-    path: Assets/Level12.unity
-    guid: 2c55e262870c1bc45a80389c92a004f6
-  - enabled: 1
-    path: Assets/Level13.unity
-    guid: 324bda4983f62814c865bb9f0ca75f36
-  - enabled: 1
-    path: Assets/Level14.unity
-    guid: b108dd8f4d66f1749952278fcd171b3f
-  - enabled: 1
-    path: Assets/Level15.unity
-    guid: bf733857b1a22a449863a81e1009bc6c
-  - enabled: 1
-    path: Assets/Level16.unity
-    guid: f23a8723527d4e24dbdec59899b4c523
-  - enabled: 1
-    path: Assets/Level17.unity
-    guid: 17c986bf3163c4b4e8a8f8c14e62239a
-  - enabled: 1
-    path: Assets/Level18.unity
-    guid: 703acd94368030443b49335d435c818b
-  - enabled: 1
-    path: Assets/Level19.unity
-    guid: 2bd601e1a53dadf42bfdcef4583b5811
-  - enabled: 1
-    path: Assets/Level20.unity
-    guid: 81c750b894fe1494aaeeb4088f38a3b7
-  - enabled: 1
-    path: Assets/Level21.unity
-    guid: 269fc0921e0923f4099c534da7e16be4
-  - enabled: 1
-    path: Assets/Level22.unity
-    guid: 61bb52ccd3c21ae4d99fe7a4d626f431
-  - enabled: 1
-    path: Assets/Level23.unity
-    guid: f206f705e45b8eb4eb97b738d4aa9a39
-  - enabled: 1
-    path: Assets/Level24.unity
-    guid: 3cce9132c05557640a91c17392df4361
-  - enabled: 1
-    path: Assets/Level25.unity
-    guid: 355e69abfe2939f4aa6bb3199b319506
+  m_configObjects: {}

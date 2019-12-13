@@ -88,7 +88,6 @@ public class Game : MonoBehaviour
 
         highlighted_color = new Color((248f / 255f), (149f / 255f), (43f / 255f));
         default_color = new Color((238f / 255f), (180f / 255f), (119f / 255f));
-        allWaypoints = FindObjectsOfType<Waypoint>();
         plus_outlined = Resources.Load<Sprite>("Tiles/PlusLightOutlined");
         plus_ = Resources.Load<Sprite>("Tiles/PlusLight");
         straight_outlined = Resources.Load<Sprite>("Tiles/StraightOutlined");
@@ -112,6 +111,8 @@ public class Game : MonoBehaviour
         LoadLocationJson();
 
         tiles = FindObjectsOfType<RotateTile>();
+        allWaypoints = FindObjectsOfType<Waypoint>();
+
 
 
         control = 0;
@@ -388,6 +389,7 @@ public class Game : MonoBehaviour
     public static void EndGame(int result)
     {
         int numScenes = SceneManager.sceneCountInBuildSettings;
+        Debug.Log(SceneManager.GetActiveScene().buildIndex);
         if (result == VICTORY)
         {
             if (SceneManager.GetActiveScene().buildIndex < numScenes - 1)
@@ -396,7 +398,7 @@ public class Game : MonoBehaviour
             }
             else
             {
-                SceneManager.LoadScene("Menu");
+                SceneManager.LoadScene(0);
             }
 
         }
