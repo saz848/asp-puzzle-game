@@ -39,7 +39,16 @@ coords(X, Y) :- X = (0..n)*5, Y = (0..n)*5.
 1 {inst(X, Y, T): shape(T)} 1 :- coords(X, Y).
 ```
 
-In short, switching to ASP made our lives significantly easier, as despite using proper ASP relatively last minute, it was much easier for the task at hand than using Prolog was.
+Additionally, ASP made the actual constraints we wished to generate much more flexible in terms of their implementation, and constraints in general seemed a lot hairier to attempt to implement in Prolog. The output of the initial board generation via a call to `agg_shapes/7` results in output that is relatively unintuitive to reason about with Prolog code. An example generated board state is seen below:
+```
+R = [[initial_shape(_3780, 5, 5), initial_shape(_4284, 4, 5), initial_shape(_4788, 3, 5), initial_shape(_5292, 2, 5), initial_shape(_5796, 1, 5), initial_shape(_6300, 0, 5)], [initial_shape(_6360, 5, 4), initial_shape(_6864, 4, 4), initial_shape(_7368, 3, 4), initial_shape(_7872, 2, 4), initial_shape(_8376, 1, 4), initial_shape(_8880, 0, 4)], [initial_shape(_8940, 5, 3), initial_shape(_9444, 4, 3), initial_shape(_9948, 3, 3), initial_shape(_10452, 2, 3), initial_shape(_10956, 1, 3), initial_shape(..., ..., ...)], [initial_shape(_11520, 5, 2), initial_shape(_12024, 4, 2), initial_shape(_12528, 3, 2), initial_shape(_13032, 2, 2), initial_shape(..., ..., ...)|...], [initial_shape(_14100, 5, 1), initial_shape(_14604, 4, 1), initial_shape(_15108, 3, 1), initial_shape(..., ..., ...)|...], initial_shape(_16674, 5, 5), initial_shape(_17178, 4, 5), initial_shape(_17682, 3, 5), initial_shape(..., ..., ...)|...] .
+```
+
+In this case, we see that the board is a 5x5 state, with each row having a list of 5 elements, and the top-level list having 5 such rows (note that the uninitialized variables, e.g. `_3780`, exist because of the fact that the shapes are not constrained upon generation, and would instead be constrained during post-processing). At the time, we reasoned that while we could code hardcode relations between the boardstate for a static size (e.g. 5x5), it would be rather difficult to make it work for arbitrary NxN board sizes, which is the main goal we had when setting out to create constraint-based level generation for the game. Due to this, we ultimately decided to switch over to ASP and see if it was more manageable than Prolog was (also, because we just wanted to use *actual* ASP, given that our initial work in Prolog was largely due to us misunderstanding some articles that referred to AnsProlog). 
+
+In retrospect, the concern we had regarding working with Prolog was not necessarily the case for all constraints. We could easily flatten the list of generated nodes, and use `member/2` in order to iteratively find a path that connects the starting and ending platforms, essentially providing the constraint that the level must be solvable. Other constraints could be similarly constructed, but in general are much more clunky to implement than they are in ASP.   
+
+In short, switching to ASP made our lives significantly easier, as despite using proper ASP relatively last minute it was much easier for the task at hand than using Prolog was. ASP offered additional flexibility in terms of the generation 
 
 ### Creating Levels using ASP
 
