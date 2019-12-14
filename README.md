@@ -58,6 +58,13 @@ Since we ended up with a significant number of models to choose from for our lev
 
 We then parse the JSON represenation of the level, which is in the form of `inst(10,10,cross)`. The x and y coordinates are the first two parameters, and the third parameter is the type of puzzle piece. We can then instantiate a GameObject prefab using this information at the given location. We do not need to consider the rotation of the piece because the puzzle piece can be rotated by the player during gameplay. The start and end tiles are hard coded at the specific locations.
 
+#### Examples of Levels
+Sample Level 1:
+![alt text](https://github.com/saz848/asp-puzzle-game/blob/master/example1.PNG "Sample Level 1")
+
+Sample Level 2:
+![alt text](https://github.com/saz848/asp-puzzle-game/blob/master/example2.PNG "Sample Level 2")
+
 The JSON containing all 2 million generated models, as well as the smaller segmented jsons, can be downloaded [from this Google Drive folder](https://drive.google.com/drive/folders/1izZUHmV_7Y5GmlJufRCTfJggH4vHG2Jw?usp=sharing).
 
 In order to generate your own JSONs, the following commands should be used (assuming a Windows OS):
